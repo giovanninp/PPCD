@@ -10,7 +10,7 @@ public class Printer {
     }
 
     public void print() {
-        while(!pool.attemptToPrint()){}
+        while(!pool.attemptToPrint()){};
         System.out.print("-");
         try {
             Thread.sleep(50);
