@@ -2,7 +2,6 @@ package school.cesar.primos;
 
 import java.lang.Thread;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Worker extends Thread {
