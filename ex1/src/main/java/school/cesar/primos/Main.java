@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// NOTE: 
+// Calcule os primos de 0 a 1000 em paralelo (4 threads com cargas iguais)
+// Apesar de ineficiente, use o método Util.primo() e armazene os numeros
+// primos na List primos declarada acima
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         List<Integer> primos = new ArrayList<Integer>();
@@ -40,11 +45,8 @@ public class Main {
             for (int valPosix = 0; valPosix < len; valPosix++) {
                 primos.add(workerResult.get(valPosix));
             }
-        }
 
-        // Calcule os primos de 0 a 1000 em paralelo (4 threads com cargas iguais)
-        // Apesar de ineficiente, use o método Util.primo() e armazene os numeros
-        // primos na List primos declarada acima
+        }
 
         System.out.println(Arrays.toString(primos.toArray()));
     }
